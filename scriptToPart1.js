@@ -8,8 +8,8 @@
       alert(xhr.status +':'+xhr.statusText);
     }
     else{
-      alert(xhr.responseText);
+      return xhr.responseText;
     }
   }
-  
+  alert(xhr.onreadystatechange());
 })();
