@@ -8,8 +8,14 @@
       alert(xhr.status +':'+xhr.statusText);
     }
     else{
-      return xhr.responseText;
+     array = JSON.parse(xhr.responseText);
+     var list= document.createElement('ul');
+     document.body.appendChild(list);
+     for(var i=0; i < array.length;i++){
+       var li = document.createElement('li');
+       li.innerHTML = array[i].name;
+       list.appendChild(li);
+     }
     }
   }
-  alert(xhr.onreadystatechange());
 })();
