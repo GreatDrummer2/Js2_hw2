@@ -46,12 +46,40 @@ function deskMaker(node){
           if(i == 2){
             black.innerHTML ='<img src = \"./img/'+ arr[3] +'.png\">';
           }
-          if(i == 1){
-            if(j== 0 || j==7)
-            black.innerHTML ='<img src = \"./img/'+ arr[0] +'.png\">';          
-          }
           else if(i == 7){
             black.innerHTML ='<img src = \"./img/'+ arr[3] +'1.png\">';
+          }
+          if(i == 1){
+            if(j== 0)
+            black.innerHTML ='<img src = \"./img/'+ arr[0] +'.png\">';          
+          }
+          if(i == 8){
+            if(j== 7)
+            black.innerHTML ='<img src = \"./img/'+ arr[0] +'1.png\">';          
+          }
+          if(i == 1){
+            if(j== 6)
+            black.innerHTML ='<img src = \"./img/'+ arr[5] +'.png\">';          
+          }
+          if(i == 8){
+            if(j== 1)
+            black.innerHTML ='<img src = \"./img/'+ arr[5] +'1.png\">';          
+          }
+          if(i == 1){
+            if(j== 2)
+            black.innerHTML ='<img src = \"./img/'+ arr[1] +'.png\">';          
+          }
+          if(i == 8){
+            if(j== 5)
+            black.innerHTML ='<img src = \"./img/'+ arr[1] +'1.png\">';          
+          }
+          if(i == 1){
+            if(j== 4)
+            black.innerHTML ='<img src = \"./img/'+ arr[4] +'.png\">';          
+          }
+          if(i == 8){
+            if(j== 3)
+            black.innerHTML ='<img src = \"./img/'+ arr[4] +'1.png\">';          
           }
           desk.appendChild(black);
         }
@@ -64,6 +92,38 @@ function deskMaker(node){
           }
           else if(i == 7){
             white.innerHTML ='<img src = \"./img/'+ arr[3] +'1.png\">';
+          }
+          if(i == 1){
+            if(j== 7)
+            white.innerHTML ='<img src = \"./img/'+ arr[0] +'.png\">';          
+          }
+          if(i == 8){
+            if(j== 0)
+            white.innerHTML ='<img src = \"./img/'+ arr[0] +'1.png\">';          
+          }
+          if(i == 1){
+            if(j== 1)
+            white.innerHTML ='<img src = \"./img/'+ arr[5] +'.png\">';          
+          }
+          if(i == 8){
+            if(j== 6)
+            white.innerHTML ='<img src = \"./img/'+ arr[5] +'1.png\">';          
+          }
+          if(i == 1){
+            if(j== 5)
+            white.innerHTML ='<img src = \"./img/'+ arr[1] +'.png\">';          
+          }
+          if(i == 8){
+            if(j== 2)
+            white.innerHTML ='<img src = \"./img/'+ arr[1] +'1.png\">';          
+          }
+          if(i == 8){
+            if(j== 4)
+            white.innerHTML ='<img src = \"./img/'+ arr[2] +'1.png\">';          
+          }
+          if(i == 1){
+            if(j== 3)
+            white.innerHTML ='<img src = \"./img/'+ arr[2] +'.png\">';          
           }
           desk.appendChild(white);
         }
