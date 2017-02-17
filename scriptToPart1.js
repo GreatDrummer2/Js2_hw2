@@ -7,7 +7,9 @@
     if(xhr.status != 200){
       alert(xhr.status +':'+xhr.statusText);
     }
+    else{
+      alert(xhr.responseText);
+    }
   }
-  var array = xhr.responseText.parse(array);
-  console.log(array[0]);
+  
 })();
