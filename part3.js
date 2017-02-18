@@ -8,7 +8,8 @@
       alert(xhr.status +':'+xhr.statusText); // если есть ошибки выводим айди ошибки
     }
     else{
-     console.log(JSON.parse(xhr.responseText));
+      var array = JSON.parse(xhr.responseText);
+      console.log(array[0].position[0]);
     }
   }
 })();

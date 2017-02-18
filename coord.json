@@ -3,53 +3,53 @@
     "img":"./img/b.png",
     "position":[
       "C1",
-      "F1",
-    ],
-  }
+      "F1"
+    ]
+  },
   {
     "img":"./img/b1.png",
     "position":[
       "C8",
-      "F8",
-    ],
+      "F8"
+    ]
   },
   {
     "img":"./img/c.png",
     "position":[
-      "E1",
-    ],
+      "E1"
+    ]
   },
   {
     "img":"./img/c1.png",
     "position":[
-      "D8",
-    ],
+      "D8"
+    ]
   },
   {
     "img":"./img/i.png",
     "position":[
       "D1"
-    ],
+    ]
   },
   {
     "img":"./img/i1.png",
     "position":[
       "E8"
-    ],
+    ]
   },
   {
     "img":"./img/k.png",
     "position":[
       "B1",
-      "G1",
-    ],
+      "G1"
+    ]
   },
   {
     "img":"./img/k1.png",
     "position":[
       "B8",
-      "G8",
-    ],
+      "G8"
+    ]
   },
   {
     "img":"./img/p.png",
@@ -61,8 +61,8 @@
       "E2",
       "F2",
       "G2",
-      "H2",
-    ],
+      "H2"
+    ]
   },
   {
     "img":"./img/p1.png",
@@ -74,21 +74,21 @@
       "E7",
       "F7",
       "G7",
-      "H7",
-    ],
+      "H7"
+    ]
   },
   {
     "img":"./img/s.png",
     "position":[
       "A1",
-      "H1",
-    ],
+      "H1"
+    ]
   },
   {
     "img":"./img/s1.png",
     "position":[
       "A8",
-      "H8",
-    ],
-  },
+      "H8"
+    ]
+  }
 ]
