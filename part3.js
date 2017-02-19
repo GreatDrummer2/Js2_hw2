@@ -35,23 +35,14 @@ function deskMaker(node){
     }
   }
 
-   var arr = ['s','b','i','p','c','k'];
   this.sqr = function(){
     for(var i= 1 ;i<= 8;i++){
       for(var j = 0;j<8;j++){
-        if((i+j)%2){
-          black = document.createElement('div');
-          black.className = 'black';
-          black.id = String.fromCharCode(65+j)+i;
-          desk.appendChild(black);
-        }
-        else{
-          white = document.createElement('div');
-          white.className = 'white';
-          white.id = String.fromCharCode(65+j)+i;
-          desk.appendChild(white);
-        }
-      }
+          square = document.createElement('div');
+          square.className = (i+j)%2 ? 'black' : 'white';
+          square.id = String.fromCharCode(65+j)+i;
+          desk.appendChild(square);
+       }
     }
   }
 
@@ -176,30 +167,33 @@ function deskMaker(node){
     this.colright();
     this.colrightNum();
   }
-}
 
-
-function gettingCoord(){
-  var xhr = new XMLHttpRequest(); //создаем запрос
-  xhr.open('GET','http://localhost/coord.json',true); // настраиваем
-  xhr.send(); //посылаем
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState != 4) return; // если еще ничего не получили-ничего не надо возвращать
-    if(xhr.status != 200){
-      alert(xhr.status +':'+xhr.statusText); // если есть ошибки выводим айди ошибки
-    }
-    else{
-      var array = JSON.parse(xhr.responseText);
-      var desk01 = new deskMaker(document.body);
-      desk01.exe();
-      desk01.extra();
-      for(var i =0;i< array.length;i++){
-        for(var j =0;j< array[i].position.length;j++){
-          var sqrIcon = document.getElementById(array[i].position[j]);
-          sqrIcon.innerHTML = '<img src = \"'+array[i].img+'\">';
+  this.gettingCoord = function(url){
+    var xhr = new XMLHttpRequest(); //создаем запрос
+    xhr.open('GET',url,true); // настраиваем
+    xhr.send(); //посылаем
+    xhr.onreadystatechange = function(){
+      if(xhr.readyState != 4) return; // если еще ничего не получили-ничего не надо возвращать
+      if(xhr.status != 200){
+        alert(xhr.status +':'+xhr.statusText); // если есть ошибки выводим айди ошибки
+      }
+      else{
+        var array = JSON.parse(xhr.responseText);
+        for(var i =0;i< array.length;i++){
+          for(var j =0;j< array[i].position.length;j++){
+            var sqrIcon = document.getElementById(array[i].position[j]);
+            sqrIcon.innerHTML = '<img src = \"'+array[i].img+'\">';
+          }
         }
       }
     }
+  };
+  this.fullexe = function(url){
+    this.exe();
+    this.extra();
+    this.gettingCoord(url);
   }
-};
-gettingCoord();
+}
+
+var desk01 = new deskMaker(document.body);
+desk01.fullexe('http://localhost/coord.json');

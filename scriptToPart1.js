@@ -11,11 +11,11 @@
      array = JSON.parse(xhr.responseText); // JSON to JS
      var list= document.createElement('ul'); // создаем список
      document.body.appendChild(list);
-     for(var i=0; i < array.length;i++){ // добавляем элементы списка
-       var li = document.createElement('li');
-       li.innerHTML = array[i].name;
-       list.appendChild(li);
-     }
+     array.forEach(function(item){
+      var li = document.createElement('li');
+      li.innerHTML = item.name;
+      list.appendChild(li);
+     })
     }
   }
 })();
